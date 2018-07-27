@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 	<html lang="en" class="no-js">
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -12,6 +12,8 @@
 		<meta name="description" content="">
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
+		<!--  -->
+		<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
@@ -37,11 +39,12 @@
 							<nav id="nav-menu-container">
 								<ul class="nav-menu">
 									<li id="logo" class="d-flex float-left"><a href="index.html" class="navbar-brand" style="font-size: 24px;"><i class="fa fa-cutlery"></i> mithocha</a></li>
-									<li><a href=".contact.html">FAQ</a></li>
-									<li><a href=".contact.html">Contact</a></li>
+									<li><a href="faq.html">FAQ</a></li>
+									<li><a href="contact.html">Contact</a></li>
 									<li><a href="menu.html">Food For Business</a></li>
 								</ul>
-							</nav>
+							</nav>							
+
 							<nav id="nav-menu-container col-md-4 float-right">
 								<ul class="nav-menu">
 									<li>
@@ -53,10 +56,153 @@
 										<i class="fa fa-user"></i> I am a chef</a>
 									</li>
 								</ul><!-- #nav-menu-container -->
-							</nav>					      		  
+							</nav>
+
+							<div class="header-right">
+								<div class="cart box_1">
+									<a href="checkout.html">
+										<h3> <span class="simpleCart_total"> Rs 0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<i class="fa fa-shopping-cart fa-2x"></i><!-- <img src="img/bag.png" alt="" > --></h3>
+									</a>	
+									<p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"></div>				      		  
 						</div>
 					</div>
 				</header><!-- #header -->
+
+
+							<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header" style="border-bottom: none; padding: 10px 10px 0px;">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<!-- Begin # DIV Form -->
+										<div id="div-forms">
+
+											<!-- Begin # Login Form -->
+											<form class="form-area contact-form" id="login-form" action="#" method="post">
+												<div class="modal-body">
+													<div class="modal-header" style="border: none;">
+														<h4> Sign in with your mithoo account </h4>
+													</div>
+
+													<div class="fb-login-button" data-width="50px" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+
+													<div class="form-group px-2">
+														<input name="name" id="login_username" placeholder="Your phone number / email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your phone number / email'" class="common-input mb-20 form-control" required="" type="text">
+
+														<input name="password" type="password" placeholder="Your password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" class="common-input mb-20 form-control" required="">
+
+														<div class="clearfix">
+															<div class="d-inline float-left ml-2">
+																<input type="checkbox" id="confirm-checkbox" class="confirm-checkbox" checked>
+																<label for="confirm-checkbox">Remember Me</label>
+
+																<button id="login_lost_btn" type="button" class="genric-btn link-border circle"><u>Forgot Password?</u></button>
+															</div>
+														</div>
+
+													</div>
+
+												</div>
+												<div class="modal-footer">
+													<div class="d-block">
+														<p class="d-inline my-2">Don't have an account?</p>                                
+															<button id="login_register_btn" type="button" class="genric-btn success-border circle small  my-2">Register</button>
+														
+															<button type="submit" class="genric-btn success circle float-right">Login</button>
+														
+													
+														<a role="button" class="genric-btn link my-3 large" href="chefadmin.html" target="_blank" style="font-size: 16px;">Login as a chef</a>
+													</div>
+												</div>
+											</form>
+											<!-- End # Login Form -->
+
+											<!-- Begin | Lost Password Form -->
+											<form class="form-area contact-form" id="lost-form" action="#" method="post" style="display:none;">
+												<div class="modal-body">
+													<div class="modal-header mb-2" style="border: none;">
+														<h4> Forgot your password? </h4>
+													</div>
+
+													<p class="font-weight-bold p-2">Enter the e-mail address associated with your account. Click submit to have your password e-mailed to you</p>
+													<div class="px-2 form-group">
+														<input name="email" id="lost_email" placeholder="Email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="common-input mb-20 form-control" required="" type="email">
+													</div>
+												</div>
+
+												<div class="modal-footer d-flex justify-content-between">
+													<div><p class="d-inline">Remembered your password?</p>                                
+														<button id="lost_login_btn" type="button" class="genric-btn success-border circle small">Log In</button>
+													</div>
+													<div>
+														<button type="submit" class="genric-btn success circle">Submit</button>
+													</div>
+												</div>
+											</form>
+											<!-- End | Lost Password Form -->
+
+											<!-- Begin | Register Form -->
+											<form class="form-area contact-form" id="register-form" action="#" method="post" style="display:none;">
+												<div class="modal-body">
+													<div class="modal-header mb-2 mt-0 pt-0 mb-1" style="border: none;">
+														<h4> Sign up </h4>
+													</div>
+													<div class="form-group px-2 mt-1">
+														<input name="name" id="register_user_firstname" placeholder="First name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First name'" class="common-input mb-20 form-control" required="" type="text">
+
+														<input name="name" id="register_user_lastname" placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last name'" class="common-input mb-20 form-control" required="" type="text">
+
+														<input name="email" id="register_email" placeholder="Email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="common-input mb-20 form-control" required="" type="email">
+
+														<input name="password" id="register_password" type="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" class="common-input mb-20 form-control" required="">
+
+														<input name="password" id="confirm_password" type="password" placeholder="Confirm password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm password'" class="common-input mb-20 form-control" required="">
+
+														<input class="common-input mb-20 form-control" id="inputPhone" maxlength="10" name="phone" required="required" size="10" title="" type="tel" value=""  placeholder="mobile/phone number" onfocus="this.placeholder = 'mobile/phone number'" onblur="this.placeholder = 'mobile/phone number'">
+
+
+														<div class="form-check form-check-inline mx-3">									
+														  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
+														  <label class="form-check-label" for="male">male</label>
+														</div>
+
+														<div class="form-check form-check-inline mx-3">
+														  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
+														  <label class="form-check-label" for="female">female</label>
+														</div>
+
+
+														<div class="clearfix">
+															<div class="d-inline float-left mt-3">
+																<input type="checkbox" id="confirm-checkbox" class="confirm-checkbox" checked>
+																<label for="confirm-checkbox">By signing up, I agree to mithocha's <a href="#terms.html" target="_blank"><u>Terms & Conditions</u></a></label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="modal-footer d-flex justify-content-between">
+													<div><p class="d-inline">Already have an account?</p>                                
+														<button id="register_login_btn" type="button" class="genric-btn success-border circle small">Log In</button>
+													</div>
+													<div>
+														<button type="submit" class="genric-btn success circle">Register</button>
+													</div>				    	    
+												</div>
+											</form>
+											<!-- End | Register Form -->
+
+										</div>
+										<!-- End # DIV Form -->
+									</div>
+								</div>
+							</div>
 			
 			<!-- start banner Area -->
 			<section class="about-banner relative">

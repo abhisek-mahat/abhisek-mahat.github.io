@@ -12,6 +12,8 @@
 		<meta name="description" content="">
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
+		<!--  -->
+		<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
@@ -41,7 +43,8 @@
 									<li><a href="contact.html">Contact</a></li>
 									<li><a href="menu.html">Food For Business</a></li>
 								</ul>
-							</nav>
+							</nav>							
+
 							<nav id="nav-menu-container col-md-4 float-right">
 								<ul class="nav-menu">
 									<li>
@@ -53,7 +56,18 @@
 										<i class="fa fa-user"></i> I am a chef</a>
 									</li>
 								</ul><!-- #nav-menu-container -->
-							</nav>					      		  
+							</nav>
+
+							<div class="header-right">
+								<div class="cart box_1">
+									<a href="checkout.html">
+										<h3> <span class="simpleCart_total"> Rs 0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<i class="fa fa-shopping-cart fa-2x"></i><!-- <img src="img/bag.png" alt="" > --></h3>
+									</a>	
+									<p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"></div>				      		  
 						</div>
 					</div>
 				</header><!-- #header -->
@@ -96,13 +110,16 @@
 													</div>
 
 												</div>
-												<div class="modal-footer d-flex justify-content-between">
-													<div><p class="d-inline">Don't have an account?</p>                                
-														<button id="login_register_btn" type="button" class="genric-btn success-border circle small">Register</button>
+												<div class="modal-footer">
+													<div class="d-block">
+														<p class="d-inline my-2">Don't have an account?</p>                                
+															<button id="login_register_btn" type="button" class="genric-btn success-border circle small  my-2">Register</button>
+														
+															<button type="submit" class="genric-btn success circle float-right">Login</button>
+														
+													
+														<a role="button" class="genric-btn link my-3 large" href="chefadmin.html" target="_blank" style="font-size: 16px;">Login as a chef</a>
 													</div>
-													<div>
-														<button type="submit" class="genric-btn success circle">Login</button>
-													</div>				    	    
 												</div>
 											</form>
 											<!-- End # Login Form -->
@@ -200,7 +217,7 @@
 											</p>
 											<!-- <a href="#" class="primary-btn text-uppercase">Order Now</a> -->
 
-											<!-- <div class="row d-flex justify-content-center"> -->
+											<!-- <div class="row d-flex justify-content-start"> -->
 												<div class="col-lg-10 pl-0 mt-5">
 													<form class="form-wrap mt-5">
 														<div class="btn-group input-group-icon" role="group" aria-label="Basic example">
@@ -214,37 +231,225 @@
 															<a type="submit" class="btn-form text-center" href="#"><span class="fa fa-search search-icon"></span></a>
 														</div>
 													</form>
-													<div class="slider-link">
+													<!-- <div class="slider-link">
 														<a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
-													</div>
+													</div> -->
 												</div>
 												<!-- </div> -->
 											</div>
+
 										</div>
 									</div>					
 								</section>
-								<!-- End banner Area -->			
 
-								<!-- Start menu-area Area -->
+								<section class="review-area section-gap ">
+									<div class="row d-flex">
+										<div class="col-md-12">
+											<div class="container">
+												<div class="row d-flex justify-content-center">
+													<div class="menu-content pb-70 col-lg-8">
+														<div class="title text-center">
+															<h1 class="mb-10">Quick Search</h1>
+														</div>
+													</div>
+												</div>
+
+												<div class="row ordering-section-grids-item d-flex justify-content-between circle">
+													<div class="col-md-2 ordering-section-grid-item">
+														<a href="foods.html" class="text-center">
+															<div class="ordering-section-grid-process-item">
+																<img src="img/breakfast.png" alt="">
+																<p class="text-black font-weight-bold">Lunch</p>									
+															</div>
+														</a>
+													</div>
+													<div class="col-md-2 ordering-section-grid-item">
+														<a href="foods.html" class="text-center">
+															<div class="ordering-section-grid-process-item">
+																<img src="img/diet.png" alt="">
+																<p class="text-black font-weight-bold">Veg</p>
+															</div>
+														</a>
+													</div>
+													<div class="col-md-2 ordering-section-grid-item">
+														<a href="foods.html" class="text-center">
+															<div class="ordering-section-grid-process-item">
+																<img src="img/steak.png" alt="">
+																<p class="text-black font-weight-bold">Non-Veg</p>
+															</div>
+														</a>
+													</div>
+													<div class="col-md-2 ordering-section-grid-item">
+														<a href="foods.html" class="text-center">
+															<div class="ordering-section-grid-process-item">
+																<img src="img/budget.png" alt="">
+																<p class="text-black font-weight-bold">Mitho Meal</p>
+															</div>
+														</a>
+													</div>
+													<div class="col-md-2 ordering-section-grid-item">
+														<a href="foods.html" class="text-center">
+															<div class="ordering-section-grid-process-item">
+																<img src="img/laugh.png" alt="">
+																<p class="text-black font-weight-bold">Happy Hour</p>
+															</div>
+														</a>
+													</div>
+													<div class="clearfix"></div>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</section>
+								<!-- End banner Area -->			
 								<section class="menu-area section-gap" id="menu">
 									<div class="container">
 										<div class="row d-flex justify-content-center">
 											<div class="menu-content pb-70 col-lg-8">
 												<div class="title text-center">
-													<h1 class="mb-10">The foods available for order</h1>
-													<p>You are what type of food you consume.</p>
+													<h1 class="mb-10">Order Foods</h1>
+													<p class="lead">In just FOUR steps</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="row ordering-section-grids">
+											<div class="col-md-3 ordering-section-grid">
+												<div class="ordering-section-grid-process">
+													<img src="img/cooking.png" alt="">
+													<p>Choose <span>Your Food</span></p>
+													<label></label>
+												</div>
+											</div>
+											<div class="col-md-3 ordering-section-grid">
+												<div class="ordering-section-grid-process">
+													<img src="img/salad.png" alt="">
+													<p>Order  <span>Your Cuisine</span></p>
+													<label></label>
+												</div>
+											</div>
+											<div class="col-md-3 ordering-section-grid">
+												<div class="ordering-section-grid-process">
+													<img src="img/delivery.png" alt="">
+													<p>Pay <span> on delivery</span></p>
+													<label></label>
+												</div>
+											</div>
+											<div class="col-md-3 ordering-section-grid">
+												<div class="ordering-section-grid-process">
+													<img src="img/ok.png" alt="">
+													<p>Enjoy <span>your <span class="text-danger">MITHOOS </span>food </span></p>
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</section>
+
+
+								<section class="review-area section-gap ">
+									<div class="row d-flex">
+											<div class="container">
+												<div class="row d-flex justify-content-center">
+													<div class="menu-content pb-70 col-lg-8">
+														<div class="title text-center">
+															<h1>Top Chefs of the week</h1>		
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="active-review-carusel">
+														<div class="single-review">
+															<div class="row d-flex">
+																<div class="col-md-6">
+																	<img src="img/user.png" alt="">
+																	<h4>Geeta Khadka</h4>													
+																	<div class="star">
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>								
+																	</div>
+																	<p class="font-weight-bold">Foodpreneur</p>	
+																	<p>
+																		She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her customers.
+																	</p>
+																</div>
+																<div class="col-md-6">
+																	<img src="img/user.png" alt="">
+																	<h4>Geeta Khadka</h4>													
+																	<div class="star">
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>								
+																	</div>
+																	<p class="font-weight-bold">Foodpreneur</p>	
+																	<p>
+																		She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her customers.
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="single-review">
+															<img src="img/user.png" alt="">
+															<h4>Sharmila Shrestha</h4>
+															<div class="star">
+																<span class="fa fa-star checked"></span>
+																<span class="fa fa-star checked"></span>
+																<span class="fa fa-star checked"></span>
+																<span class="fa fa-star checked"></span>
+																<span class="fa fa-star"></span>								
+															</div>
+															<p class="font-weight-bold">Food Enthusiast</p>	
+															<p>
+																She is specialized in Newari foods.
+															</p>
+														</div>	
+														<div class="single-review">
+															<img src="img/user.png" alt="">
+															<h4>Romiya Sharma</h4>
+															<div class="star">
+																<span class="fa fa-star checked"></span>
+																<span class="fa fa-star checked"></span>
+																<span class="fa fa-star checked"></span>
+																<span class="fa fa-star"></span>
+																<span class="fa fa-star"></span>								
+															</div>
+															<p class="font-weight-bold">Food Enthusiast, Recipe Follower</p>		
+															<p>
+																She does varieties of food items on her kitchen. She wants to try something out quickly.
+															</p>
+														</div>													
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+										
+
+								<!-- Start menu-area Area -->
+								<section class="menu-area section-gap" id="menu">
+									<div class="container">
+										<div class="row d-flex justify-content-center">
+											<div class="menu-content pb-2 col-lg-8">
+												<div class="title text-center">
+													<h1 class="mb-1">Trending foods</h1>
+													<p>You are what you eat</p>
 												</div>
 											</div>
 										</div>	
 
-										<ul class="filter-wrap filters col-lg-12 no-padding">
+										<!-- <ul class="filter-wrap filters col-lg-12 no-padding">
 											<li class="active" data-filter="*"><i class="fa fa-cutlery fa-2x"></i>&nbsp;All Menu</li>
 											<li data-filter=".breakfast">mitho khana</li>
 											<li data-filter=".lunch">Lunch</li>
 											<li data-filter=".dinner">Achar</li>
 											<li data-filter=".budget-meal">Budget Meal</li>
 											<li data-filter=".buffet">Drinks</li>
-										</ul>
+										</ul> -->
 
 										<div class="filters-content">
 											<div class="row grid">
@@ -403,53 +608,6 @@
 							<!-- End menu-area Area -->			
 
 
-			<section class="blog-area section-gap" id="blog">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Recipes from our homechefs</h1>
-								<p>This is a recipe</p>
-							</div>
-						</div>
-					</div>					
-					<div class="row">
-						<div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-							<div class="thumb">
-								<img class="img-fluid" src="img/b1.jpg" alt="">								
-							</div>
-							<p class="date">02 Aug 2018</p>
-							<a href="blog-single.html"><h4>Cooking Mithho Fried Rice
-							in minutes</h4></a>
-							<p>
-								First ad this and this 
-								we have to make a list here
-							</p>
-							<div class="meta-bottom d-flex justify-content-between">
-								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-							</div>									
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-							<div class="thumb">
-								<img class="img-fluid" src="img/b1.jpg" alt="">								
-							</div>
-							<p class="date">02 Aug 2018</p>
-							<a href="blog-single.html"><h4>Cooking Mithho Fried Rice
-							in minutes</h4></a>
-							<p>
-								First ad this and this 
-								we have to make a list here
-							</p>
-							<div class="meta-bottom d-flex justify-content-between">
-								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-							</div>									
-						</div>							
-					</div>
-				</div>	
-			</section>						
-
 			<!-- start footer Area -->		
 			<footer class="footer-area">
 				<div class="footer-widget-wrap">
@@ -529,5 +687,6 @@
 				<script src="js/mail-script.js"></script>	
 				<script src="js/main.js"></script>	
 				<script src="js/login-modal.js"></script>
+				<script src="js/simpleCart.min.js"> </script>
 			</body>
 	</html>

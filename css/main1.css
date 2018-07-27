@@ -29,6 +29,10 @@ html {
     -webkit-tap-highlight-color: transparent
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 @-ms-viewport {
     width: device-width
 }
@@ -2059,8 +2063,8 @@ h6 {
 }
 
 .main-menu {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-left: 15px;
     padding-right: 15px
@@ -2326,7 +2330,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-gap {
-    padding: 120px 0
+    padding: 80px 0
 }
 
 .alert-msg {
@@ -2505,7 +2509,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 400;
   font-size: 18px;
   padding: 17px;
-  width: 27%;
+  width: 16%;
   background: #f42f2c;
   color: #fff;
   border: none;
@@ -3131,9 +3135,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .review-area {
-    background: url(../img/review-bg.jpg) no-repeat center/cover
+    background: initial;
 }
 
+.faint-green{
+    background: #f9f9ff;
+}
 .review-area .owl-carousel .owl-item img {
     width: auto !important
 }
@@ -3611,41 +3618,36 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: none;
     float: left;
     width: 80%;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    background: #f42f2c
 }
 
-.widget-wrap .search-widget::-webkit-input-placeholder {
+.single-post .search-widget::-webkit-input-placeholder {
     color: #fff
 }
 
-.widget-wrap .search-widget::-moz-placeholder {
+.single-post .search-widget::-moz-placeholder {
     color: #fff
 }
 
-.widget-wrap .search-widget:-ms-input-placeholder {
+.single-post .search-widget:-ms-input-placeholder {
     color: #fff
 }
 
-.widget-wrap .search-widget:-moz-placeholder {
+.single-post .search-widget:-moz-placeholder {
     color: #fff
 }
 
-.widget-wrap .search-widget form.search-form button {
+.single-post .search-widget form.search-form button {
     float: left;
     width: 20%;
-    padding: 10px;
-    background: #f42f2c;
+    padding: 11px;
+    background: #388e3c;
     color: #fff;
     font-size: 17px;
     border: none;
     cursor: pointer;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px
 }
 
-.widget-wrap .search-widget form.search-form::after {
+.single-post .search-widget form.search-form::after {
     content: "";
     clear: both;
     display: table
@@ -4504,4 +4506,91 @@ a.navbar-brand:hover {
 .btn-group a:hover{
     color: #fff;
     transform: scale(1.05);
+}
+
+.ordering-section-grid-process label {
+    position: absolute;
+    background: url(../img/img-sprite.png) no-repeat -230px -79px;
+    display: inline-block;
+    width: 81px;
+    height: 23px;
+    top: 40%;
+    right: -13%;
+}
+
+.ordering-section-grid, .ordering-section-grid-item {
+    padding: 30px;
+}
+.ordering-section-grid-process{
+    text-align: center;
+}
+.ordering-section-grid-process p, .ordering-section-grid-process-item p{
+    font-size: 16px;
+    margin: 15px auto;
+    color: #222;
+}
+.ordering-section-grid-process p>span, .ordering-section-grid-process-item p>span{
+    font-weight: 600;
+    color: #35b729;
+}
+.ordering-section-grid-process img{
+    height: 100px;
+    width: 100px;
+}
+.ordering-section-grid-item a{
+    transition: 0.4s all linear;
+}
+.ordering-section-grid-item a:hover img{
+    transform-origin: center;
+    transform: scale(1.1);
+    filter:contrast(130%);
+    transition: 0.3s all ease-in;
+}
+.ordering-section-grid-process-item p:hover{
+    color: #35b729;
+    text-decoration: underline;
+}
+.ordering-section-grids-item{
+    margin-left: 2em;
+}
+
+.header-right li {
+  display: block;
+}
+.header-right li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  background:#D96B66;
+  padding: 0.4em 2em;
+  border-radius: 3px;
+    -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  display:block;
+}
+.header-right li a:hover{
+  color: #fff;
+  background: #5fa022;
+}
+.header-right {
+  float: right;
+  vertical-align: middle;
+}
+
+.box_1 h3 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    float: left;
+}
+.box_1 h3 img {
+    margin-left: 3px;
+    height: 32px;
+    width: 32px;
+}
+
+a.simpleCart_empty {
+    font-size: 0.85em;
 }
