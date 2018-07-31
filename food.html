@@ -1,0 +1,624 @@
+	<!DOCTYPE html>
+	<html lang="en" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/icon.ico">
+		<!-- Author Meta -->
+		<meta name="author" content="">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- Site Title -->
+		<title>Mithocha.com : Homemade feelings, anywhere</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--	CSS
+				============================================= -->
+				<link rel="stylesheet" href="css/linearicons.css">
+				<link rel="stylesheet" href="css/font-awesome.min.css">
+				<link rel="stylesheet" href="css/bootstrap.css">
+				<link rel="stylesheet" href="css/magnific-popup.css">
+				<link rel="stylesheet" href="css/jquery-ui.css">				
+				<link rel="stylesheet" href="css/nice-select.css">							
+				<link rel="stylesheet" href="css/animate.min.css">
+				<link rel="stylesheet" href="css/owl.carousel.css">				
+				<link rel="stylesheet" href="css/main1.css">
+
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+						});
+					});
+				</script>
+				<script src="js/vendor/jquery-2.2.4.min.js"></script>
+				<script src="js/popper.min.js"></script>
+				<script src="js/vendor/bootstrap.min.js"></script>
+				<script src="js/simpleCart.min.js"> </script>
+				<script src="resources/search.js"></script>
+			</head>
+			<body>	
+				<header id="header">					
+					<div class="container main-menu">
+						<div class="row align-items-center justify-content-around d-flex">			
+							<nav id="nav-menu-container">
+								<ul class="nav-menu">
+									<li id="logo" class="d-flex float-left"><a href="index.html" class="navbar-brand" style="font-size: 24px;"><i class="fa fa-cutlery"></i> mithocha</a></li>
+									<li><a href="menu.html">Food For Business</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="faq.html">FAQ</a></li>							
+								</ul>
+							</nav>							
+
+							<nav id="nav-menu-container col-md-4 float-right">
+								<ul class="nav-menu">
+									<li>
+										<a href="#" class="genric-btn success circle small" role="button" data-toggle="modal" data-target="#login-modal" style="font-size: 14px;">
+										<i class="fa fa-lock"></i> Sign In / Register</a>
+									</li>
+									<li>
+										<a href="chefadmin.html" class="genric-btn success circle small" role="button" style="font-size: 14px;">
+										<i class="fa fa-user"></i> I am a chef</a>
+									</li>
+								</ul><!-- #nav-menu-container -->
+							</nav>
+
+							<div class="header-right">
+								<div class="cart box_1 my-1">
+									<a href="checkout.html">
+										<h3> <span class="simpleCart_total"> Rs 0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<i class="fa fa-shopping-cart fa-2x"></i><!-- <img src="img/bag.png" alt="" > --></h3>
+									</a>	
+									<!-- <p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p> -->
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"></div>				      		  
+						</div>
+					</div>
+				</header><!-- #header -->
+
+
+							<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header" style="border-bottom: none; padding: 10px 10px 0px;">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<!-- Begin # DIV Form -->
+										<div id="div-forms">
+
+											<!-- Begin # Login Form -->
+											<form class="form-area contact-form" id="login-form" action="#" method="post">
+												<div class="modal-body">
+													<div class="modal-header" style="border: none;">
+														<h4> Sign in with your mithoo account </h4>
+													</div>
+
+													<div class="fb-login-button" data-width="50px" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+
+													<div class="form-group px-2">
+														<input name="name" id="login_username" placeholder="Your phone number / email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your phone number / email'" class="common-input mb-20 form-control" required="" type="text">
+
+														<input name="password" type="password" placeholder="Your password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" class="common-input mb-20 form-control" required="">
+
+														<div class="clearfix">
+															<div class="d-inline float-left ml-2">
+																<input type="checkbox" id="confirm-checkbox" class="confirm-checkbox" checked>
+																<label for="confirm-checkbox">Remember Me</label>
+
+																<button id="login_lost_btn" type="button" class="genric-btn link-border circle"><u>Forgot Password?</u></button>
+															</div>
+														</div>
+
+													</div>
+
+												</div>
+												<div class="modal-footer">
+													<div class="d-block">
+														<p class="d-inline my-2">Don't have an account?</p>                                
+															<button id="login_register_btn" type="button" class="genric-btn success-border circle small  my-2">Register</button>
+														
+															<button type="submit" class="genric-btn success circle float-right">Login</button>
+														
+													
+														<a role="button" class="genric-btn link my-3 large" href="chefadmin.html" target="_blank" style="font-size: 16px;">Login as a chef</a>
+													</div>
+												</div>
+											</form>
+											<!-- End # Login Form -->
+
+											<!-- Begin | Lost Password Form -->
+											<form class="form-area contact-form" id="lost-form" action="#" method="post" style="display:none;">
+												<div class="modal-body">
+													<div class="modal-header mb-2" style="border: none;">
+														<h4> Forgot your password? </h4>
+													</div>
+
+													<p class="font-weight-bold p-2">Enter the e-mail address associated with your account. Click submit to have your password e-mailed to you</p>
+													<div class="px-2 form-group">
+														<input name="email" id="lost_email" placeholder="Email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="common-input mb-20 form-control" required="" type="email">
+													</div>
+												</div>
+
+												<div class="modal-footer d-flex justify-content-between">
+													<div><p class="d-inline">Remembered your password?</p>                                
+														<button id="lost_login_btn" type="button" class="genric-btn success-border circle small">Log In</button>
+													</div>
+													<div>
+														<button type="submit" class="genric-btn success circle">Submit</button>
+													</div>
+												</div>
+											</form>
+											<!-- End | Lost Password Form -->
+
+											<!-- Begin | Register Form -->
+											<form class="form-area contact-form" id="register-form" action="#" method="post" style="display:none;">
+												<div class="modal-body">
+													<div class="modal-header mb-2 mt-0 pt-0 mb-1" style="border: none;">
+														<h4> Sign up </h4>
+													</div>
+													<div class="form-group px-2 mt-1">
+														<input name="name" id="register_user_firstname" placeholder="First name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First name'" class="common-input mb-20 form-control" required="" type="text">
+
+														<input name="name" id="register_user_lastname" placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last name'" class="common-input mb-20 form-control" required="" type="text">
+
+														<input name="email" id="register_email" placeholder="Email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="common-input mb-20 form-control" required="" type="email">
+
+														<input name="password" id="register_password" type="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" class="common-input mb-20 form-control" required="">
+
+														<input name="password" id="confirm_password" type="password" placeholder="Confirm password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm password'" class="common-input mb-20 form-control" required="">
+
+														<input class="common-input mb-20 form-control" id="inputPhone" maxlength="10" name="phone" required="required" size="10" title="" type="tel" value=""  placeholder="mobile/phone number" onfocus="this.placeholder = 'mobile/phone number'" onblur="this.placeholder = 'mobile/phone number'">
+
+
+														<div class="form-check form-check-inline mx-3">									
+														  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
+														  <label class="form-check-label" for="male">male</label>
+														</div>
+
+														<div class="form-check form-check-inline mx-3">
+														  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
+														  <label class="form-check-label" for="female">female</label>
+														</div>
+
+
+														<div class="clearfix">
+															<div class="d-inline float-left mt-3">
+																<input type="checkbox" id="confirm-checkbox" class="confirm-checkbox" checked>
+																<label for="confirm-checkbox">By signing up, I agree to mithocha's <a href="#terms.html" target="_blank"><u>Terms & Conditions</u></a></label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="modal-footer d-flex justify-content-between">
+													<div><p class="d-inline">Already have an account?</p>                                
+														<button id="register_login_btn" type="button" class="genric-btn success-border circle small">Log In</button>
+													</div>
+													<div>
+														<button type="submit" class="genric-btn success circle">Register</button>
+													</div>				    	    
+												</div>
+											</form>
+											<!-- End | Register Form -->
+
+										</div>
+										<!-- End # DIV Form -->
+									</div>
+								</div>
+							</div>
+
+						<!-- start banner Area -->
+						<section class="relative about-banner">	
+							<div class="overlay overlay-bg"></div>
+							<div class="container">				
+								<div class="row d-flex align-items-center justify-content-center">
+									<div class="about-content col-lg-12">
+										<h1 class="text-white">
+											Available Foods	
+										</h1>	
+										<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Lunch </a></p>
+									</div>	
+								</div>
+							</div>
+						</section>
+						<section class="post-content-area single-post-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 filter_options">
+									<div class="single-sidebar-widget search-widget mb-5">
+
+										<article class="card card-group-item">
+											<header class="bg-white p-3 text-right" style="border-bottom: 1px solid #f5f5f5;">
+												<h6 class="title"><a href="javascript:" class="text-danger"><u>Reset filter</u></a></h6>
+											</header>
+											<div class="filter-content">
+												<div class="card-body">
+													<form>
+														<div class="custom-control custom-checkbox">	
+														  	<input type="checkbox" class="custom-control-input" id="Check1">
+														  	<label class="custom-control-label" for="Check1">Non-veg</label>
+														</div> <!-- form-check.// -->
+
+														<div class="custom-control custom-checkbox">
+														  	<input type="checkbox" class="custom-control-input" id="Check2">
+														 	<label class="custom-control-label" for="Check2">Veg</label>
+														</div> <!-- form-check.// -->
+
+														<div class="custom-control custom-checkbox">
+														  	<input type="checkbox" class="custom-control-input" id="Check3">
+														  	<label class="custom-control-label" for="Check3">SuperChef</label>
+														</div> <!-- form-check.// -->
+													</form>
+												</div> <!-- card-body.// -->
+												<div id="accordion" role="tablist" aria-multiselectable="true">
+												    <div class="card-header" role="tab" id="headingOne">
+												      <h5 class="mb-0">
+												        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="check-link">
+												          Other dishes <i class="more-less fa fa-plus"></i>			
+												        </a>
+												      </h5>
+												    </div>
+
+												    <div id="collapseOne" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+												      <div class="card-body">
+												        <form>
+															<div class="custom-control custom-checkbox">	
+															  	<input type="checkbox" class="custom-control-input" id="Chec1">
+															  	<label class="custom-control-label" for="Chec1">Newari</label>
+															</div> <!-- form-check.// -->
+
+															<div class="custom-control custom-checkbox">
+															  	<input type="checkbox" class="custom-control-input" id="Chec2">
+															 	<label class="custom-control-label" for="Chec2">Thakali</label>
+															</div> <!-- form-check.// -->
+
+															<div class="custom-control custom-checkbox">
+															  	<input type="checkbox" class="custom-control-input" id="Chec3">
+															  	<label class="custom-control-label" for="Chec3">Continental</label>
+															</div> <!-- form-check.// -->
+
+															<div class="custom-control custom-checkbox">
+															  	<input type="checkbox" class="custom-control-input" id="Chec4">
+															  	<label class="custom-control-label" for="Chec4">Indian</label>
+															</div> <!-- form-check.// -->
+															<div class="custom-control custom-checkbox">
+															  	<input type="checkbox" class="custom-control-input" id="Chec5">
+															 	<label class="custom-control-label" for="Chec5">Chinese</label>
+															</div> <!-- form-check.// -->
+
+															<div class="custom-control custom-checkbox">
+															  	<input type="checkbox" class="custom-control-input" id="Chec6">
+															  	<label class="custom-control-label" for="Chec6">Korean</label>
+															</div> <!-- form-check.// -->
+
+															<div class="custom-control custom-checkbox">
+															  	<input type="checkbox" class="custom-control-input" id="Chec7">
+															  	<label class="custom-control-label" for="Chec7">Italian</label>
+															</div> <!-- form-check.// -->
+														</form>
+												      </div>
+												  </div>											  
+												
+												</div>
+											</div>
+										</article> <!-- card-group-item.// -->
+								</div>
+						</div>
+
+						<script>
+							function toggleIcon(e) {
+							  $(e.target).parent().find('.more-less').toggleClass('fa-minus fa-plus');
+							  console.log( $(e.target).parent() );
+							}
+
+							$('#accordion').on('hidden.bs.collapse', toggleIcon);
+							$('#accordion').on('shown.bs.collapse', toggleIcon);
+						</script>
+
+						<div class="col-lg-6 posts-list">
+							<div class="single-post row">								
+								<div class="col-lg-12">
+									<div class="single-sidebar-widget search-widget mb-5">
+										<form class="search-form" action="#" autocomplete="off">
+				                            <input placeholder="Search Food Items" name="search" type="text" id="foo" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Food Items'" class="border autocomplete">
+				                            <button type="submit"><i class="fa fa-search"></i></button>
+				                        </form>
+				                        <script>
+											var foods = ["Egg Fried Rice","Mashed Wheat Flour","Pustakari","Noodles sadheko","Plain Rice","Plain Veg Rice", "Achar", "Aludum", "Alu Paratha"];
+											autocomplete(document.getElementById("foo"), foods);
+										</script>
+									</div>									
+								</div>
+								<div class="col-lg-12">
+									<div class="chef-title bg-white p-2 mb-5">
+										<div class="row">
+											<div class="col-md-2 chef-pro">
+												<img class="img-fluid" src="img/aunt.jpg" alt="">
+											</div>
+											<div class="col-md-4 chef-pro-desc">
+												<a href="chefprofile.html" class="text-danger font-weight-bold">Geeta Khadka</a>
+												<p><i class="fa fa-map-marker"></i> Koteshwor</p>
+											</div>
+											<div class="col-md-6 d-flex justify-content-between">
+											  <div class="open"><i class="fa fa-clock-o"></i> Available for 9am-12pm</div>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-heart"></span>3</a>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-bookmark"></span>7</a>
+											</div>
+
+										</div>
+										<div class="row chef-pro-foods d-flex justify-content-start my-1">
+											<a href="#"><img class="img-fluid" src="img/f1.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f2.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f3.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f4.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f5.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f6.jpg" alt="+2 More" class=""></a>
+										</div>
+										<div class="row d-flex justify-content-around">
+											<div class="col-md-4 star">
+												<h6><img src="img/star.png" alt="" height="24" width="24">&nbsp;5/10 reviews</h6>
+											</div>
+											<div class="col-md-4 delivery-time">
+												<h6><img src="img/delivery.png" alt="" height="24" width="24"> &nbsp;1:30 - 2hrs</h6>
+											</div>
+											<div class="col-md-4 price">
+												<h6><img src="img/rupee.png" alt="" height="24" width="24">&nbsp;Min 200</h6>
+											</div>
+										</div>
+									</div>	
+
+									<div class="chef-title bg-white p-2 mb-5">
+										<div class="row">
+											<div class="col-md-2 chef-pro">
+												<img class="img-fluid" src="img/aunt3.jpg" alt="">
+											</div>
+											<div class="col-md-4 chef-pro-desc">
+												<a href="chefprofile.html" class="text-danger font-weight-bold">Ramkala Sharma</a>
+												<p><i class="fa fa-map-marker"></i> Putalisadak</p>
+											</div>
+											<div class="col-md-6 d-flex justify-content-between">
+											  <div class="open"><i class="fa fa-clock-o"></i> Available for 10am-12pm</div>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-heart"></span>12</a>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-bookmark"></span>5</a>
+											</div>
+
+										</div>
+										<div class="row chef-pro-foods d-flex justify-content-start my-1">
+											<a href="#"><img class="img-fluid" src="img/f7.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f2.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f8.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f9.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f10.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f3.jpg" alt="+2 More" class=""></a>
+										</div>
+										<div class="row d-flex justify-content-around">
+											<div class="col-md-4 star">
+												<h6><img src="img/star.png" alt="" height="24" width="24">&nbsp;3/5 reviews</h6>
+											</div>
+											<div class="col-md-4 delivery-time">
+												<h6><img src="img/delivery.png" alt="" height="24" width="24"> &nbsp;1:30 - 2hrs</h6>
+											</div>
+											<div class="col-md-4 price">
+												<h6><img src="img/rupee.png" alt="" height="24" width="24">&nbsp;Min 170</h6>
+											</div>
+										</div>
+									</div>
+
+									<div class="chef-title bg-white p-2 mb-5">
+										<div class="row">
+											<div class="col-md-2 chef-pro">
+												<img class="img-fluid" src="img/aunt4.jpg" alt="">
+											</div>
+											<div class="col-md-4 chef-pro-desc">
+												<a href="chefprofile.html" class="text-danger font-weight-bold">Sharmila Shrestha</a>
+												<p><i class="fa fa-map-marker"></i> Baluwatar</p>
+											</div>
+											<div class="col-md-6 d-flex justify-content-between">
+											  <div class="open"><i class="fa fa-clock-o"></i> Available for 10am-2pm</div>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-heart"></span>16</a>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-bookmark"></span>5</a>
+											</div>
+
+										</div>
+										<div class="row chef-pro-foods d-flex justify-content-start my-1">
+											<a href="#"><img class="img-fluid" src="img/aunt-1.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/b3.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f4.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/b1.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/b2.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f6.jpg" alt="+2 More" class=""></a>
+										</div>
+										<div class="row d-flex justify-content-around">
+											<div class="col-md-4 star">
+												<h6><img src="img/star.png" alt="" height="24" width="24">&nbsp;5/8 reviews</h6>
+											</div>
+											<div class="col-md-4 delivery-time">
+												<h6><img src="img/delivery.png" alt="" height="24" width="24"> &nbsp; 2hrs - 2:30hrs</h6>
+											</div>
+											<div class="col-md-4 price">
+												<h6><img src="img/rupee.png" alt="" height="24" width="24">&nbsp;Min 200</h6>
+											</div>
+										</div>
+									</div>
+
+									<div class="chef-title bg-white p-2 mb-5">
+										<div class="row">
+											<div class="col-md-2 chef-pro">
+												<img class="img-fluid" src="img/aun2.jpg" alt="">
+											</div>
+											<div class="col-md-4 chef-pro-desc">
+												<a href="chefprofile.html" class="text-danger font-weight-bold">Romiya Sharma</a>
+												<p><i class="fa fa-map-marker"></i> Maitigahar</p>
+											</div>
+											<div class="col-md-6 d-flex justify-content-between">
+											  <div class="open"><i class="fa fa-clock-o"></i> Available for 9am-12pm</div>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-heart"></span>9</a>
+												<a class="text-danger" href="javascript:"><span class="lnr lnr-bookmark"></span>8</a>
+											</div>
+
+										</div>
+										<div class="row chef-pro-foods d-flex justify-content-start my-1">
+											<a href="#"><img class="img-fluid" src="img/f1.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f2.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f3.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f4.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f5.jpg" alt=""></a>
+											<a href="#"><img class="img-fluid" src="img/f6.jpg" alt="+2 More" class=""></a>
+										</div>
+										<div class="row d-flex justify-content-around">
+											<div class="col-md-4 star">
+												<h6><img src="img/star.png" alt="" height="24" width="24">&nbsp;6/7 reviews</h6>
+											</div>
+											<div class="col-md-4 delivery-time">
+												<h6><img src="img/delivery.png" alt="" height="24" width="24"> &nbsp;1:00 - 1:30hrs</h6>
+											</div>
+											<div class="col-md-4 price">
+												<h6><img src="img/rupee.png" alt="" height="24" width="24">&nbsp;Min 135</h6>
+											</div>
+										</div>
+									</div>
+
+									<nav class="blog-pagination justify-content-center d-flex">
+				                        <ul class="pagination">
+				                            <li class="page-item">
+				                                <a href="#" class="page-link" aria-label="Previous">
+				                                    <span aria-hidden="true">
+				                                        <span class="lnr lnr-chevron-left"></span>
+				                                    </span>
+				                                </a>
+				                            </li>
+				                            <li class="page-item"><a href="#" class="page-link">01</a></li>
+				                            <li class="page-item active"><a href="#" class="page-link">02</a></li>
+				                            <li class="page-item"><a href="#" class="page-link">03</a></li>
+				                            <li class="page-item"><a href="#" class="page-link">04</a></li>
+				                            <li class="page-item"><a href="#" class="page-link">09</a></li>
+				                            <li class="page-item">
+				                                <a href="#" class="page-link" aria-label="Next">
+				                                    <span aria-hidden="true">
+				                                        <span class="lnr lnr-chevron-right"></span>
+				                                    </span>
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </nav>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="widget-wrap">
+								<div class="location_now py-2 px-3 text-center">
+									<i class="fa fa-map-markers"></i> Your current location is
+									<p>Himalaya Hotel, Pulchowk</p>
+									<div class="text-center"> 
+										<a href="javascript:" class="text-danger">Change</a> | <a href="javascript:" class="text-danger">Remove</a>
+									</div>
+								</div>
+								<div class="single-sidebar-widget popular-post-widget text-center">
+									<h4 class="popular-title">Recently Viewed</h4>
+									<hr>
+									<div class="popular-post-list">
+										<div class="single-post-list d-flex flex-column">
+											<!-- <p>You have not viewed any chefs yet.</p><br> -->
+											<a href="chefprofile.html">
+												<div class="view-thumb">													
+													<img class="img-fluid" src="img/aunt.jpg" alt="">								
+													<div class="d-inline py-1 mx-2 pt-0">				
+														<p style="text-indent: 10px;">Geeta Thapa</p>
+													</div>
+												</div>												
+											</a>
+										</div>															
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+				<!-- start footer Area -->		
+				<footer class="footer-area">
+					<div class="footer-widget-wrap">
+						<div class="container">
+							<div class="row section-gap d-flex justify-content-center">
+								<div class="col-lg-3 col-md-3 col-sm-12">
+									<div class="single-footer-widget site-links">
+										<h4>Site Links</h4>
+										<ul class="link-lists">
+											<li><a href="about.html">About Us</a></li>
+											<li><a href="#privacy.html">Privacy Policy</a></li>
+											<li><a href="#terms.html">terms and conditions</a></li>         
+										</ul>
+									</div>
+								</div>	
+
+								<div class="col-lg-6  col-md-6 col-sm-12">
+									<div class="single-footer-widget text-center subscribe">
+										<h4>Subscribe To Our Newsletter</h4>									
+										<div class="d-flex flex-row" id="mc_embed_signup">
+											<form class="navbar-form" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
+												<div class="input-group add-on align-items-center d-flex">
+													<input class="form-control" name="EMAIL" placeholder="Your Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email address'" required="" type="email">
+													<div style="position: absolute; left: -5000px;">
+														<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+													</div>
+													<div class="input-group-btn">
+														<button class="genric-btn">Subscribe</button>
+													</div>
+												</div>
+												<div class="info mt-20"></div>
+											</form>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-3 col-md-6 col-sm-12">
+									<div class="single-footer-widget contact">
+										<h4>Contact Us</h4>
+										<ul class="social-icons">
+											<li><a href="#" class="circle"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#" class="circle"><i class="fa fa-instagram"></i></a></li>         
+										</ul>
+										<p class="number mt-2">
+											<span class="phone-only"><i class="fa fa-phone circle"></i><a href="tel:+977-9860463736" class="text-white"> +977-9860463736</a></span>
+										</p>									
+									</div>
+								</div>					
+							</div>					
+						</div>					
+					</div>
+					<div class="footer-bottom-wrap">
+						<div class="container">
+							<div class="row footer-bottom d-flex justify-content-center align-items-center">
+								<p class="col-md-4 footer-text text-center m-0">
+									Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.<br> Mithocha.com
+								</p>
+							</div>						
+						</div>
+					</div>
+				</footer>
+				<!-- End footer Area -->	
+	
+				<script src="js/jquery-ui.js"></script>					
+				<script src="js/easing.min.js"></script>			
+				<script src="js/hoverIntent.js"></script>
+				<script src="js/superfish.min.js"></script>	
+				<script src="js/jquery.ajaxchimp.min.js"></script>
+				<script src="js/jquery.magnific-popup.min.js"></script>						
+				<script src="js/jquery.nice-select.min.js"></script>					
+				<script src="js/owl.carousel.min.js"></script>			
+				<script src="js/isotope.pkgd.min.js"></script>								
+				<script src="js/mail-script.js"></script>	
+				<script src="js/main.js"></script>	
+				<script src="js/login-modal.js"></script>				
+			</body>
+			</html>

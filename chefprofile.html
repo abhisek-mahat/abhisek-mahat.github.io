@@ -12,8 +12,6 @@
 		<meta name="description" content="">
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
-		<!--  -->
-		<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
@@ -31,6 +29,20 @@
 				<link rel="stylesheet" href="css/animate.min.css">
 				<link rel="stylesheet" href="css/owl.carousel.css">				
 				<link rel="stylesheet" href="css/main1.css">
+
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+						});
+					});
+				</script>
+				<script src="js/vendor/jquery-2.2.4.min.js"></script>
+				<script src="js/popper.min.js"></script>
+				<script src="js/vendor/bootstrap.min.js"></script>
+				<script src="js/simpleCart.min.js"> </script>
+				<script src="resources/search.js"></script>			
 			</head>
 			<body>	
 				<header id="header">					
@@ -39,9 +51,9 @@
 							<nav id="nav-menu-container">
 								<ul class="nav-menu">
 									<li id="logo" class="d-flex float-left"><a href="index.html" class="navbar-brand" style="font-size: 24px;"><i class="fa fa-cutlery"></i> mithocha</a></li>
-									<li><a href="faq.html">FAQ</a></li>
-									<li><a href="contact.html">Contact</a></li>
 									<li><a href="menu.html">Food For Business</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="faq.html">FAQ</a></li>							
 								</ul>
 							</nav>							
 
@@ -52,18 +64,18 @@
 										<i class="fa fa-lock"></i> Sign In / Register</a>
 									</li>
 									<li>
-										<a href="cheflogin.html" class="genric-btn success circle small" role="button" style="font-size: 14px;">
+										<a href="chefadmin.html" class="genric-btn success circle small" role="button" style="font-size: 14px;">
 										<i class="fa fa-user"></i> I am a chef</a>
 									</li>
 								</ul><!-- #nav-menu-container -->
 							</nav>
 
 							<div class="header-right">
-								<div class="cart box_1">
+								<div class="cart box_1 my-1">
 									<a href="checkout.html">
 										<h3> <span class="simpleCart_total"> Rs 0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<i class="fa fa-shopping-cart fa-2x"></i><!-- <img src="img/bag.png" alt="" > --></h3>
 									</a>	
-									<p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p>
+									<!-- <p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p> -->
 									<div class="clearfix"> </div>
 								</div>
 							</div>
@@ -211,9 +223,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Chef Profile				
+								Chef Details				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Chef details </a></p>
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Profile</a></p>
 						</div>	
 					</div>
 				</div>
@@ -227,153 +239,182 @@
 						<div class="col-lg-8 posts-list">
 							<div class="single-post row">
 								<div class="col-lg-12">
-									<div class="single-sidebar-widget search-widget mb-5">
-										<form class="search-form" action="#">
-				                            <input placeholder="Search Food Items" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Food Items'" class="border">
+									<div class="single-sidebar-widget search-widget mb-4">
+										<form class="search-form" action="" autocomplete="off">
+				                            <input placeholder="Search Food Items" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Food Items'" class="border" id="che">
 				                            <button type="submit"><i class="fa fa-search"></i></button>
 				                        </form>
+				                        <script>
+											var foods = ["Egg Fried Rice","Mashed Wheat Flour","Pustakari","Noodles sadheko","Plain Rice","Plain Veg Rice", "Achar", "Aludum", "Alu Paratha"];
+											autocomplete(document.getElementById("che"), foods);
+										</script>
 									</div>
 								</div>
 								<div class="col-lg-12">
 									<div class="feature-img">
-										<img class="img-fluid" src="img/aunt.jpg" alt="">
+										<img class="img-fluid" src="img/kitchen1.jpg" alt="">
 									</div>									
 								</div>
-								<div class="col-lg-12 col-md-12 meta-details d-flex justify-content-start">
-									<ul class="tags text-center">
-										<li><a href="#">Food savvy,</a></li>
-										<li><a href="#">Fooodpreneur,</a></li>
-										<li><a href="#">Foodoloholic,</a></li>
-									</ul>
-									<div class="user-details d-block">
-										<p class="user-name"><a href="#">Geeta Khadka</a> <span class="lnr lnr-user"></span></p>
-										<p class="date"><a href="#"> Member Since 12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-										<p class="view"><a href="#">100 Views</a> <span class="lnr lnr-eye"></span></p>
-										<p class="comments "><a href="#">60 Happy Orders</a> <span class="lnr lnr-smile"></span></p>
-										<ul class="social-links">
-											Social Links
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										</ul>																				
-									</div>
-								</div>
 								<div class="col-lg-12">
-									<div class="quotes">
-										She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her customers.									
-									</div>
-									<div class="row mt-30 mb-30">
-										<div class="col-6">
-											<img class="img-fluid" src="img/aunt-1.jpg" alt="">
+									<!-- <div class="quotes"> -->
+									<blockquote class="generic-blockquote">
+										"She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her customers."							
+									</blockquote>
+								</div>
+								<div class="col-md-12">
+									<div class="section-top-border">
+										<h3>Chef's Food junction</h3>
+										<div class="row gallery-item">
+											<div class="col-md-4">
+												<a href="img/f1.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/f1.jpg);"></div></a>
+											</div>
+											<div class="col-md-4">
+												<a href="img/f2.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/f2.jpg);"></div></a>
+											</div>
+											<div class="col-md-4">
+												<a href="img/aunt-1.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/aunt-1.jpg);"></div></a>
+											</div>
+											<div class="col-md-6">
+												<a href="img/f3.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/aunt-2.jpg);"></div></a>
+											</div>
+											<div class="col-md-6">
+												<a href="img/aunt-2.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/f3.jpg);"></div></a>
+											</div>
+											<div class="col-md-4">
+												<a href="img/f4.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/f4.jpg);"></div></a>
+											</div>
+											<div class="col-md-4">
+												<a href="img/f5.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/f5.jpg);"></div></a>
+											</div>
+											<div class="col-md-4">
+												<a href="img/f6.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/f6.jpg);"></div></a>
+											</div>
 										</div>
-										<div class="col-6">
-											<img class="img-fluid" src="img/aunt-2.jpg" alt="">
-										</div>									
 									</div>
+									
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-4 sidebar-widgets">
 							<div class="widget-wrap">
 								<div class="single-sidebar-widget user-info-widget">
-									<img src="img/aunt.jpg" alt="" height="50" width="50">
-									<a href="#"><h4>Geeta Khadka</h4></a>
-									<p>
+									<img src="img/aunt.jpg" alt="" class="img-fluid test">
+									<h6 class="my-2"><img src="img/star.png" alt="" height="24" width="24">&nbsp;5/10 reviews</h6>				
+									<a href="#"><h4><span class="lnr lnr-user"></span>&nbsp;Geeta Khadka</h4>
+									<p class="text-center">
 										Foodpreneur
 									</p>
-									<ul class="social-links">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									</ul>
-									<p>
-										She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her customers.
-									</p>
+									<div class="d-flex justify-content-around">
+										<p class="view"><span class="lnr lnr-eye"></span>&nbsp;100 Views</p>
+										<p class="comments"><span class="lnr lnr-smile"></span>&nbsp;60 Happy Orders</p>
+									</div>
+									<div class="percentage">
+										<h5 class="popular-title my-3">Test Scores</h5>
+										<div class="d-flex progress justify-content-start">
+											<div class="col-md-5 v-test"><p>Hygiene</p></div>
+											<div class="progress-bar color-2" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="d-flex progress justify-content-start">
+											<div class="col-md-5 v-test"><p>Utensil</p></div>
+											<div class="progress-bar color-2" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="d-flex progress justify-content-start">
+											<div class="col-md-5 v-test"><p>Water</p></div>
+											<div class="progress-bar color-2" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="d-flex progress justify-content-start">
+											<div class="col-md-5 v-test"><p>Food</p></div>
+											<div class="progress-bar color-2" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="d-flex progress justify-content-start">
+											<div class="col-md-5 v-test"><p>User Rating</p></div>
+											<div class="progress-bar color-2" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
 								</div>
+
 								<div class="single-sidebar-widget popular-post-widget">
-									<h4 class="popular-title">Popular Food Items</h4>
+									<h4 class="popular-title">Foods from Chef</h4>
 									<div class="popular-post-list">
-										<div class="single-post-list d-flex flex-row align-items-center">
+										<div class="single-post-list d-flex flex-row align-items-center bg-white">
 											<div class="thumb">
 												<img class="img-fluid" src="img/aunt-1.jpg" alt="">
+												<figcaption class="text-center text-white bg-success">Rs. 200</figcaption>
 											</div>
 											<div class="details">
-												<a href="blog-single.html"><h6>Lunch</h6></a>
-												<p>02 Hours ago</p>
+												<a href="detail.html"><h6>Plain Veg Khana</h6></a>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-heart"></span>5</a></p>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-bookmark"></span>3</a></p>
 											</div>
 										</div>
-										<div class="single-post-list d-flex flex-row align-items-center">
+										<div class="single-post-list d-flex flex-row align-items-center bg-white">
 											<div class="thumb">
 												<img class="img-fluid" src="img/aunt-2.jpg" alt="">
+												<figcaption class="text-center text-white bg-success">Rs. 160</figcaption>
 											</div>
 											<div class="details">
-												<a href="blog-single.html"><h6>Lunch</h6></a>
-												<p>02 Hours ago</p>
+												<a href="detail.html"><h6>Chicken curry khana</h6></a>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-heart"></span>3</a></p>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-bookmark"></span>6</a></p>
 											</div>
 										</div>
-										<div class="single-post-list d-flex flex-row align-items-center">
+										<div class="single-post-list d-flex flex-row align-items-center bg-white">
 											<div class="thumb">
-												<img class="img-fluid" src="img/aunt-1.jpg" alt="">
+												<img class="img-fluid" src="img/f3.jpg" alt="">
+												<figcaption class="text-center text-white bg-success">Rs. 120</figcaption>
 											</div>
 											<div class="details">
-												<a href="blog-single.html"><h6>MaAsu</h6></a>
-												<p>02 Hours ago</p>
+												<a href="detail.html"><h6>Khana</h6></a>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-heart"></span>8</a></p>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-bookmark"></span>4</a></p>
 											</div>
 										</div>
-										<div class="single-post-list d-flex flex-row align-items-center">
+										<div class="single-post-list d-flex flex-row align-items-center bg-white">
 											<div class="thumb">
-												<img class="img-fluid" src="img/aunt-2.jpg" alt="">
+												<img class="img-fluid" src="img/f5.jpg" alt="">
+												<figcaption class="text-center text-white bg-success">Rs. 140</figcaption>
 											</div>
 											<div class="details">
-												<a href="blog-single.html"><h6>Massu</h6></a>
-												<p>02 Hours ago</p>
+												<a href="detail.html"><h6>Khana</h6></a>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-heart"></span>6</a></p>
+												<p><a href="javascript:" class="text-success"><span class="lnr lnr-bookmark"></span>11</a></p>
 											</div>
 										</div>															
 									</div>
 								</div>
 								<div class="single-sidebar-widget post-category-widget">
-									<h4 class="category-title">Quick Food Search</h4>
-									<ul class="cat-list">
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Mitho Food</p>
-												<p>5</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Lunch</p>
-												<p>10</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Hygenic Food</p>
-												<p>5</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Pickles</p>
-												<p>29</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Budget foods</p>
-												<p>15</p>
-											</a>
-										</li>															
-									</ul>
-								</div>	
-								<div class="single-sidebar-widget tag-cloud-widget">
-									<h4 class="tagcloud-title">Tags</h4>
-									<ul>
-										<li><a href="#">Food</a></li>
-										<li><a href="#">Hygenic</a></li>
-										<li><a href="#">Food </a></li>
-										<li><a href="#">Homemade Food</a></li>
-										<li><a href="#">Office Food Package</a></li>
-										<li><a href="#">Mitho Food</a></li>
-									</ul>
+									<div class="comment-form" style="padding: 0; border: none;">
+										<h4>Give feedback</h4>
+										<form>
+											<div class="form-group name">
+											   <input type="text" class="form-control border" id="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
+											</div>
+											<div class="form-group email">
+											   <input type="email" class="form-control border" id="email" placeholder="Your email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+											  										
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control border" id="subject" placeholder="I want to talk about" onfocus="this.placeholder = ''" onblur="this.placeholder = 'I want to talk about ....'">
+											</div>
+											<div class="form-group">
+												<textarea class="form-control mb-10 border" rows="5" name="Feedback message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'feedback message'" required=""></textarea>
+											</div>
+											<div class="form-group">
+												<div class="usr-rating bg-white p-2 d-flex justify-content-around">
+													<p class="d-inline">User Rating</p>
+													<div class="star d-inline ">
+														<span class="fa fa-star"></span>
+														<span class="fa fa-star"></span>
+														<span class="fa fa-star"></span>
+														<span class="fa fa-star"></span>
+														<span class="fa fa-star"></span>					
+													</div>
+												</div>
+											</div>
+											<a href="#" class="genric-btn primary text-uppercase">Send</a>	
+										</form>
+									</div>
 								</div>								
 							</div>
 						</div>
@@ -445,9 +486,6 @@
 			</footer>
 		<!-- End footer Area -->	
 
-				<script src="js/vendor/jquery-2.2.4.min.js"></script>
-				<script src="js/popper.min.js"></script>
-				<script src="js/vendor/bootstrap.min.js"></script>			
 				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
 				<script src="js/jquery-ui.js"></script>					
 				<script src="js/easing.min.js"></script>			

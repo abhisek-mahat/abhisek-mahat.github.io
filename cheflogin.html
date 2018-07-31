@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 	<html lang="en" class="no-js">
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -31,6 +31,19 @@
 				<link rel="stylesheet" href="css/animate.min.css">
 				<link rel="stylesheet" href="css/owl.carousel.css">				
 				<link rel="stylesheet" href="css/main1.css">
+
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+						});
+					});
+				</script>
+				<script src="js/vendor/jquery-2.2.4.min.js"></script>
+				<script src="js/popper.min.js"></script>
+				<script src="js/vendor/bootstrap.min.js"></script>
+				<script src="js/simpleCart.min.js"> </script>
 			</head>
 			<body>	
 				<header id="header">					
@@ -39,9 +52,9 @@
 							<nav id="nav-menu-container">
 								<ul class="nav-menu">
 									<li id="logo" class="d-flex float-left"><a href="index.html" class="navbar-brand" style="font-size: 24px;"><i class="fa fa-cutlery"></i> mithocha</a></li>
-									<li><a href="faq.html">FAQ</a></li>
-									<li><a href="contact.html">Contact</a></li>
 									<li><a href="menu.html">Food For Business</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="faq.html">FAQ</a></li>							
 								</ul>
 							</nav>							
 
@@ -52,18 +65,18 @@
 										<i class="fa fa-lock"></i> Sign In / Register</a>
 									</li>
 									<li>
-										<a href="cheflogin.html" class="genric-btn success circle small" role="button" style="font-size: 14px;">
+										<a href="chefadmin.html" class="genric-btn success circle small" role="button" style="font-size: 14px;">
 										<i class="fa fa-user"></i> I am a chef</a>
 									</li>
 								</ul><!-- #nav-menu-container -->
 							</nav>
 
 							<div class="header-right">
-								<div class="cart box_1">
+								<div class="cart box_1 my-1">
 									<a href="checkout.html">
 										<h3> <span class="simpleCart_total"> Rs 0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<i class="fa fa-shopping-cart fa-2x"></i><!-- <img src="img/bag.png" alt="" > --></h3>
 									</a>	
-									<p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p>
+									<!-- <p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p> -->
 									<div class="clearfix"> </div>
 								</div>
 							</div>
@@ -529,7 +542,7 @@
 										<div class="form-row my-5">
 											<div class="col-md-6">
 												<label for="date">You will be available to accept orders on *</label>
-												<input type="text" class="form-control  date-picker" name="date" placeholder="Select Date & time" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date & time'" required="">	
+												<input type="text" class="form-control  date-picker" name="date" placeholder="Select Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date'" required="">	
 											</div>
 											<div class="col-md-6">
 												<label for="time">Time</label>
@@ -638,9 +651,6 @@
 			</footer>
 		<!-- End footer Area -->	
 
-				<script src="js/vendor/jquery-2.2.4.min.js"></script>
-				<script src="js/popper.min.js"></script>
-				<script src="js/vendor/bootstrap.min.js"></script>			
 				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
 				<script src="js/jquery-ui.js"></script>					
 				<script src="js/easing.min.js"></script>			

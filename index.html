@@ -17,7 +17,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Mithocha.com : Homemade feelings, anywhere</title>
+		<title>Mithocha.com : Homemade foods, anywhere</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--	CSS
@@ -31,6 +31,20 @@
 				<link rel="stylesheet" href="css/animate.min.css">
 				<link rel="stylesheet" href="css/owl.carousel.css">				
 				<link rel="stylesheet" href="css/main1.css">
+
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+						});
+					});
+				</script>
+				<script src="js/vendor/jquery-2.2.4.min.js"></script>
+				<script src="js/popper.min.js"></script>
+				<script src="js/vendor/bootstrap.min.js"></script>
+				<script src="js/simpleCart.min.js"> </script>
+				<script src="resources/search.js"></script>
 			</head>
 			<body>	
 				<header id="header">					
@@ -39,9 +53,9 @@
 							<nav id="nav-menu-container">
 								<ul class="nav-menu">
 									<li id="logo" class="d-flex float-left"><a href="index.html" class="navbar-brand" style="font-size: 24px;"><i class="fa fa-cutlery"></i> mithocha</a></li>
-									<li><a href="faq.html">FAQ</a></li>
-									<li><a href="contact.html">Contact</a></li>
 									<li><a href="menu.html">Food For Business</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="faq.html">FAQ</a></li>							
 								</ul>
 							</nav>							
 
@@ -52,18 +66,18 @@
 										<i class="fa fa-lock"></i> Sign In / Register</a>
 									</li>
 									<li>
-										<a href="cheflogin.html" class="genric-btn success circle small" role="button" style="font-size: 14px;">
+										<a href="chefadmin.html" class="genric-btn success circle small" role="button" style="font-size: 14px;">
 										<i class="fa fa-user"></i> I am a chef</a>
 									</li>
 								</ul><!-- #nav-menu-container -->
 							</nav>
 
 							<div class="header-right">
-								<div class="cart box_1">
+								<div class="cart box_1 my-1">
 									<a href="checkout.html">
 										<h3> <span class="simpleCart_total"> Rs 0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<i class="fa fa-shopping-cart fa-2x"></i><!-- <img src="img/bag.png" alt="" > --></h3>
 									</a>	
-									<p><a href="javascript:;" class="simpleCart_empty genric-btn primary small">Empty card</a></p>
+									
 									<div class="clearfix"> </div>
 								</div>
 							</div>
@@ -208,34 +222,52 @@
 							<!-- start banner Area -->
 							<section class="banner-area">		
 								<div class="container">
-									<div class="row fullscreen align-items-center justify-content-center">
-										<div class="col-lg-12 banner-content">
-											<h6 class="text-white">homemade feeling, anywhere</h6>
-											<h1 class="text-white">Delicious, Cheap and hygenic</h1>
+									<div class="row fullscreen align-items-center">
+										<div class="col-lg-12 banner-content text-center ml-4">
+											<h5 class="text-white">"Homemade feeling, anywhere"</h5>
+											<h1 class="text-white mr-3">Delicious, Affordable & Hygienic</h1>
 											<p class="text-white">
 												<!-- we emopwer yur coooking skills  -->
 											</p>
 											<!-- <a href="#" class="primary-btn text-uppercase">Order Now</a> -->
 
-											<!-- <div class="row d-flex justify-content-start"> -->
-												<div class="col-lg-10 pl-0 mt-5">
-													<form class="form-wrap mt-5">
-														<div class="btn-group input-group-icon" role="group" aria-label="Basic example">
+											<div class="row d-flex justify-content-center">
+												<div class="col-lg-9 pl-0 mt-2">
+													<form class="form-wrap" autocomplete="off" action="/action_page.php">
+														<div class="btn-group input-group-icon autocomplete" role="group" aria-label="Basic example">
 
-															<div class="icon mt-3">
-																<i class="fa fa-crosshairs fa-2x" aria-hidden="true"></i>
+															<div class="icon mt-3" id="gps" style="background: #fff;">
+																<a href="javascript:" onclick="myFunction()"><i class="fa fa-crosshairs fa-2x" aria-hidden="true"></i></a>
+
 															</div>
+															<script>
+															function myFunction() {
+															    var txt;
+															    if (confirm("Mithocha wants to access your location?")) {
+															        txt = "Himalaya Hotel, Pulchowk";
+															    } else {
 
-															<input type="text" name="address" placeholder="What is your delivery location?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'What is your delivery location?'" class="single-input">
+															        alert("GPS is not enabled !!")
+															        txt ="";
+															    }
+															    document.getElementById("gps").innerHTML = txt;
+															}
+															</script>
 
-															<a type="submit" class="btn-form text-center" href="#"><span class="fa fa-search search-icon"></span></a>
+															<input type="text" name="address" placeholder="What is your delivery location?" id="cities" onfocus="this.placeholder = ''" onblur="this.placeholder = 'What is your delivery location?'" class="single-input">
+
+															<a type="submit" class="btn-form text-center" href="food.html"><span class="fa fa-search search-icon"></span></a>
 														</div>
 													</form>
+													<script>
+														var citi = ["Koteshwor","Kritipur","Naxal","Pulchowk","Tahachal","Putalisadak","New &amp; Road","Batisputali","Baneshwor","Baluwatar","Satdobato","Anamnagar","Asan", "Himalaya Hotel, Pulchowk"];
+														autocomplete(document.getElementById("cities"), citi);
+													</script>
 													<!-- <div class="slider-link">
 														<a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
 													</div> -->
 												</div>
-												<!-- </div> -->
+												</div>
 											</div>
 
 										</div>
@@ -250,13 +282,14 @@
 													<div class="menu-content pb-70 col-lg-8">
 														<div class="title text-center">
 															<h1 class="mb-10">Quick Search</h1>
+															<p class="lead"> Select a category</p>
 														</div>
 													</div>
 												</div>
 
 												<div class="row ordering-section-grids-item d-flex justify-content-between circle">
 													<div class="col-md-2 ordering-section-grid-item">
-														<a href="foods.html" class="text-center">
+														<a href="food.html" class="text-center">
 															<div class="ordering-section-grid-process-item">
 																<img src="img/breakfast.png" alt="">
 																<p class="text-black font-weight-bold">Lunch</p>									
@@ -264,7 +297,7 @@
 														</a>
 													</div>
 													<div class="col-md-2 ordering-section-grid-item">
-														<a href="foods.html" class="text-center">
+														<a href="food.html" class="text-center">
 															<div class="ordering-section-grid-process-item">
 																<img src="img/diet.png" alt="">
 																<p class="text-black font-weight-bold">Veg</p>
@@ -272,7 +305,7 @@
 														</a>
 													</div>
 													<div class="col-md-2 ordering-section-grid-item">
-														<a href="foods.html" class="text-center">
+														<a href="food.html" class="text-center">
 															<div class="ordering-section-grid-process-item">
 																<img src="img/steak.png" alt="">
 																<p class="text-black font-weight-bold">Non-Veg</p>
@@ -280,7 +313,7 @@
 														</a>
 													</div>
 													<div class="col-md-2 ordering-section-grid-item">
-														<a href="foods.html" class="text-center">
+														<a href="food.html" class="text-center">
 															<div class="ordering-section-grid-process-item">
 																<img src="img/budget.png" alt="">
 																<p class="text-black font-weight-bold">Mitho Meal</p>
@@ -288,7 +321,7 @@
 														</a>
 													</div>
 													<div class="col-md-2 ordering-section-grid-item">
-														<a href="foods.html" class="text-center">
+														<a href="food.html" class="text-center">
 															<div class="ordering-section-grid-process-item">
 																<img src="img/laugh.png" alt="">
 																<p class="text-black font-weight-bold">Happy Hour</p>
@@ -302,13 +335,322 @@
 									</div>	
 								</section>
 								<!-- End banner Area -->			
+								
+								<script>
+									$(function () {
+									  $('[data-toggle="tooltip"]').tooltip()
+									})
+								</script>
+
+								<!-- Start menu-area Area -->
+								<section class="menu-area section-gap" id="menu">
+									<div class="container">
+										<div class="row d-flex justify-content-center">
+											<div class="menu-content pb-2 col-lg-8">
+												<div class="title text-center">
+													<h1 class="mb-1">Trending foods</h1>
+													<p class="lead"> You are what you eat</p>
+												</div>
+											</div>
+										</div>	
+
+										<!-- <ul class="filter-wrap filters col-lg-12 no-padding">
+											<li class="active" data-filter="*"><i class="fa fa-cutlery fa-2x"></i>&nbsp;All Menu</li>
+											<li data-filter=".breakfast">mitho khana</li>
+											<li data-filter=".lunch">Lunch</li>
+											<li data-filter=".dinner">Achar</li>
+											<li data-filter=".budget-meal">Budget Meal</li>
+											<li data-filter=".buffet">Drinks</li>
+										</ul> -->
+
+										<div class="filters-content">
+											<div class="row grid">
+												<div class="col-md-4 featured-responsive all breakfast">
+													<div class="featured-place-wrap">
+														<a href="detail.html">
+															<img src="img/aunt-1.jpg" class="img-fluid" alt="#">
+														</a>
+															<span class="featured-rating-orange" data-toggle="tooltip" data-placement="top" title="Hygiene and price Score">6.5</span>
+															<div class="featured-title-box">
+																<h4>Plain Veg Rice</h4>
+																<div class="my-2">										
+																	<p><i class="fa fa-cutlery"></i> Geeta Khadka</p> <span>• </span>
+																	<p><i class="fa fa-map-marker"></i> Koteshwor</p>		
+																</div>
+																<div class="my-3">
+																	<h4>Ingredients</h4>
+																	<p> Plain Rice, Pickle, Curry </p>					
+																</div>
+																<div>
+																	<h4 class="float-left"><span class="border">Veg</span></h4>
+																	<p class="float-right"><span class="price">Rs. 180</span></p>
+																</div>
+																<div class="clearfix"></div>
+																<div class="bottom-icons my-2">
+																	<div class="open-now"><i class="fa fa-clock-o"></i> Available for 9am-12pm</div>
+																	<a class="javascript:" href=""><span class="lnr lnr-heart">12</span></a>
+																	<a class="javascript:" href=""><span class="lnr lnr-bookmark">5</span></a>
+																</div>
+															</div>
+														
+													</div>
+												</div>
+												<div class="col-md-4 featured-responsive all lunch">
+													<div class="featured-place-wrap">
+														<a href="detail.html">
+															<img src="img/aunt-2.jpg" class="img-fluid" alt="#">
+															</a>
+															<span class="featured-rating-green"  data-toggle="tooltip" data-placement="top" title="Hygiene and price Score">9.2</span>
+															<div class="featured-title-box">
+																<h4>Plain Rice</h4>
+																<div class="my-2">										
+																	<p><i class="fa fa-cutlery"></i> Romiya Sharma</p> <span>• </span>
+																	<p><i class="fa fa-map-marker"></i> Baneshwor</p>		
+																</div>
+																<div class="my-3">
+																	<h4>Ingredients</h4>
+																	<p> Plain Rice, Pickle, Curry, Salads </p>					
+																</div>
+																<div>
+																	<h4 class="float-left"><span class="border">Non-Veg</span></h4>
+																	<p class="float-right"><span class="price">Rs. 150</span></p>
+																</div>
+																<div class="clearfix"></div>
+																<div class="bottom-icons my-2">
+																	<div class="open-now"><i class="fa fa-clock-o"></i> Available for 10am-1pm</div>
+																	<a class="javascript:" href=""><span class="lnr lnr-heart">5</span></a>
+																	<a class="javascript:" href=""><span class="lnr lnr-bookmark">3</span></a>
+																</div>
+															</div>															
+													</div>
+												</div>
+												<div class="col-md-4 featured-responsive all buffet">
+													<div class="featured-place-wrap">
+														<a href="detail.html">
+															<img src="img/f1.jpg" class="img-fluid" alt="#">
+															</a>
+															<span class="featured-rating"  data-toggle="tooltip" data-placement="top" title="Hygiene and price Score">5.2</span>
+															<div class="featured-title-box">
+																<h4>Plain Rice</h4>
+																<div class="my-2">										
+																	<p><i class="fa fa-cutlery"></i> Nitika pradhan</p> <span>• </span>
+																	<p><i class="fa fa-map-marker"></i> Satdobato</p>		
+																</div>
+																<div class="my-3">
+																	<h4>Ingredients</h4>
+																	<p> RARA noodles, Seasonings </p>					
+																</div>
+																<div>
+																	<h4 class="float-left"><span class="border">Veg</span></h4>
+																	<p class="float-right"><span class="price">Rs. 70</span></p>
+																</div>
+																<div class="clearfix"></div>
+																<div class="bottom-icons my-2">
+																	<div class="open-now"><i class="fa fa-clock-o"></i> Available for 12am-2pm</div>
+																	<a class="javascript:" href=""><span class="lnr lnr-heart">11</span></a>
+																	<a class="javascript:" href=""><span class="lnr lnr-bookmark">2</span></a>
+																</div>
+															</div>
+													</div>
+												</div>
+
+												<div class="col-md-4 featured-responsive all breakfast">
+													<div class="featured-place-wrap">
+														<a href="detail.html">
+															<img src="img/f2.jpg" class="img-fluid" alt="#">
+															</a>
+															<span class="featured-rating-green"  data-toggle="tooltip" data-placement="top" title="Hygiene and price Score">8.5</span>
+															<div class="featured-title-box">
+																<h4>Egg Fried Rice</h4>
+																<div class="my-2">										
+																	<p><i class="fa fa-cutlery"></i> Ramkala Thapa</p> <span>• </span>
+																	<p><i class="fa fa-map-marker"></i> Koteshwor</p>		
+																</div>
+																<div class="my-3">
+																	<h4>Ingredients</h4>
+																	<p> Rice, Chicken Egg, Seasonings </p>					
+																</div>
+																<div>
+																	<h4 class="float-left"><span class="border">Non-Veg</span></h4>
+																	<p class="float-right"><span class="price">Rs. 70</span></p>
+																</div>
+																<div class="clearfix"></div>
+																<div class="bottom-icons my-2">
+																	<div class="open-now"><i class="fa fa-clock-o"></i> Available for 9am-12pm</div>
+																	<a class="javascript:" href=""><span class="lnr lnr-heart">10</span></a>
+																	<a class="javascript:" href=""><span class="lnr lnr-bookmark">5</span></a>
+																</div>
+															</div>
+													</div>
+												</div>
+												<div class="col-md-4 featured-responsive all lunch">
+													<div class="featured-place-wrap">
+														<a href="detail.html">
+															<img src="img/f7.jpg" class="img-fluid" alt="#">
+															</a>
+															<span class="featured-rating-orange"  data-toggle="tooltip" data-placement="top" title="Hygiene and price Score">7.3</span>
+															<div class="featured-title-box">
+																<h4>Nepali style dhindo</h4>
+																<div class="my-2">										
+																	<p><i class="fa fa-cutlery"></i> Geeta Khadka</p> <span>• </span>
+																	<p><i class="fa fa-map-marker"></i> Batisputali</p>		
+																</div>
+																<div class="my-3">
+																	<h4>Ingredients</h4>
+																	<p> Wheat flour, Salad, Pickle, Curries</p>					
+																</div>
+																<div>
+																	<h4 class="float-left"><span class="border">Veg</span></h4>
+																	<p class="float-right"><span class="price">Rs. 220</span></p>
+																</div>
+																<div class="clearfix"></div>
+																<div class="bottom-icons my-2">
+																	<div class="open-now"><i class="fa fa-clock-o"></i> Available for 9am-2pm</div>
+																	<a class="javascript:" href=""><span class="lnr lnr-heart">18</span></a>
+																	<a class="javascript:" href=""><span class="lnr lnr-bookmark">7</span></a>
+																</div>
+															</div>
+														</div>
+												</div>
+												<div class="col-md-4 featured-responsive all buffet">
+													<div class="featured-place-wrap">
+														<a href="detail.html">
+															<img src="img/f9.jpg" class="img-fluid" alt="#">
+															</a>
+															<span class="featured-rating-orange"  data-toggle="tooltip" data-placement="top" title="Hygiene and price Score">7.0</span>
+															<div class="featured-title-box">
+																<h4>Pustakari</h4>
+																<div class="my-2">										
+																	<p><i class="fa fa-cutlery"></i> Geeta Khadka</p> <span>• </span>
+																	<p><i class="fa fa-map-marker"></i> Batisputali</p>		
+																</div>
+																<div class="my-3">
+																	<h4>Ingredients</h4>
+																	<p> Sweets, Flour</p>					
+																</div>
+																<div>
+																	<h4 class="float-left"><span class="border">Veg</span></h4>
+																	<p class="float-right"><span class="price">Rs. 60</span></p>
+																</div>
+																<div class="clearfix"></div>
+																<div class="bottom-icons my-2">
+																	<div class="open-now"><i class="fa fa-clock-o"></i> Available for 9am-4pm</div>
+																	<a class="javascript:" href=""><span class="lnr lnr-heart">8</span></a>
+																	<a class="javascript:" href=""><span class="lnr lnr-bookmark">5</span></a>
+																</div>
+															</div>
+														</div>
+												</div>
+											</div>                          
+
+											<div class="d-block text-center">
+												<a href="food.html" class="primary-btn">View More</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</section>
+							<!-- End menu-area Area -->			
+
+											<section class="review-area section-gap ">
+									<div class="row d-flex">
+											<div class="container">
+												<div class="row d-flex justify-content-center">
+													<div class="menu-content pb-70 col-lg-8">
+														<div class="title text-center">
+															<h1>Top Chefs of the week</h1>
+															<p class="lead"> Top Four</p>	
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="active-review-">
+														<div class="single-review">
+															<div class="row d-flex justify-content-between">
+																<div class="col-md-3">
+																	<img src="img/aunt.jpg" alt="">
+																	<h4>Geeta Khadka</h4>											
+																	<div class="star">
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>					
+																	</div>
+																	<a href="chefprofile.html" class="genric-btn success circle small">Visit Profile</a>
+																	<p class="font-weight-bold">Foodpreneur</p>	
+																	<p>
+																		She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her family and guests.
+																	</p>
+
+																</div>
+																<div class="col-md-3">
+																	<img src="img/aunt3.jpg" alt="">
+																	<h4>Ramkala Thapa</h4>													
+																	<div class="star">
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star"></span>								
+																	</div>
+																	<a href="chefprofile.html" class="genric-btn success circle small">Visit Profile</a>
+																	<p class="font-weight-bold">Foodpreneur</p>	
+																	<p>
+																		She owns a homestay where tourists stay over sometime and the foods that she has been cooking is really something else.
+																	</p>
+																</div>
+
+																<div class="col-md-3">
+																	<img src="img/aunt4.jpg" alt="">
+																	<h4>Sharmila Shrestha</h4>
+																	<div class="star">
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star"></span>								
+																	</div>
+																	<a href="chefprofile.html" class="genric-btn success circle small">Visit Profile</a>
+																	<p class="font-weight-bold">Food Enthusiast</p>	
+																	<p>
+																		She is specialized in Newari foods and items. She has many experience in such cooking.
+																	</p>
+																</div>
+
+																<div class="col-md-3">
+																	<img src="img/aun2.jpg" alt="">
+																	<h4>Romiya Sharma</h4>
+																	<div class="star">
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star checked"></span>
+																		<span class="fa fa-star"></span>								
+																	</div>
+																	<a href="chefprofile.html" class="genric-btn success circle small">Visit Profile</a>
+																	<p class="font-weight-bold">Food Enthusiast, Recipe Follower</p>		
+																	<p>
+																		She cooks varieties of food items on her kitchen. She wants to try something out quickly.
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+
 								<section class="menu-area section-gap" id="menu">
 									<div class="container">
 										<div class="row d-flex justify-content-center">
 											<div class="menu-content pb-70 col-lg-8">
 												<div class="title text-center">
 													<h1 class="mb-10">Order Foods</h1>
-													<p class="lead">In just FOUR steps</p>
+													<p class="lead">Easily in four Steps</p>
 												</div>
 											</div>
 										</div>
@@ -338,276 +680,13 @@
 											<div class="col-md-3 ordering-section-grid">
 												<div class="ordering-section-grid-process">
 													<img src="img/ok.png" alt="">
-													<p>Enjoy <span>your <span class="text-danger">MITHOOS </span>food </span></p>
+													<p>Enjoy <span>your <span class="text-danger">MITHOCHA </span>food </span></p>
 												</div>
 											</div>
 											<div class="clearfix"></div>
 										</div>
 									</div>
 								</section>
-
-
-								<section class="review-area section-gap ">
-									<div class="row d-flex">
-											<div class="container">
-												<div class="row d-flex justify-content-center">
-													<div class="menu-content pb-70 col-lg-8">
-														<div class="title text-center">
-															<h1>Top Chefs of the week</h1>		
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="active-review-carusel">
-														<div class="single-review">
-															<div class="row d-flex">
-																<div class="col-md-6">
-																	<img src="img/user.png" alt="">
-																	<h4>Geeta Khadka</h4>													
-																	<div class="star">
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>								
-																	</div>
-																	<p class="font-weight-bold">Foodpreneur</p>	
-																	<p>
-																		She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her customers.
-																	</p>
-																</div>
-																<div class="col-md-6">
-																	<img src="img/user.png" alt="">
-																	<h4>Geeta Khadka</h4>													
-																	<div class="star">
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>
-																		<span class="fa fa-star checked"></span>								
-																	</div>
-																	<p class="font-weight-bold">Foodpreneur</p>	
-																	<p>
-																		She is very passionate in cooking foods. She can cook verious items and has been serving delicious food items to her customers.
-																	</p>
-																</div>
-															</div>
-														</div>
-														<div class="single-review">
-															<img src="img/user.png" alt="">
-															<h4>Sharmila Shrestha</h4>
-															<div class="star">
-																<span class="fa fa-star checked"></span>
-																<span class="fa fa-star checked"></span>
-																<span class="fa fa-star checked"></span>
-																<span class="fa fa-star checked"></span>
-																<span class="fa fa-star"></span>								
-															</div>
-															<p class="font-weight-bold">Food Enthusiast</p>	
-															<p>
-																She is specialized in Newari foods.
-															</p>
-														</div>	
-														<div class="single-review">
-															<img src="img/user.png" alt="">
-															<h4>Romiya Sharma</h4>
-															<div class="star">
-																<span class="fa fa-star checked"></span>
-																<span class="fa fa-star checked"></span>
-																<span class="fa fa-star checked"></span>
-																<span class="fa fa-star"></span>
-																<span class="fa fa-star"></span>								
-															</div>
-															<p class="font-weight-bold">Food Enthusiast, Recipe Follower</p>		
-															<p>
-																She does varieties of food items on her kitchen. She wants to try something out quickly.
-															</p>
-														</div>													
-													</div>
-												</div>
-											</div>
-										</div>
-									</section>
-										
-
-								<!-- Start menu-area Area -->
-								<section class="menu-area section-gap" id="menu">
-									<div class="container">
-										<div class="row d-flex justify-content-center">
-											<div class="menu-content pb-2 col-lg-8">
-												<div class="title text-center">
-													<h1 class="mb-1">Trending foods</h1>
-													<p>You are what you eat</p>
-												</div>
-											</div>
-										</div>	
-
-										<!-- <ul class="filter-wrap filters col-lg-12 no-padding">
-											<li class="active" data-filter="*"><i class="fa fa-cutlery fa-2x"></i>&nbsp;All Menu</li>
-											<li data-filter=".breakfast">mitho khana</li>
-											<li data-filter=".lunch">Lunch</li>
-											<li data-filter=".dinner">Achar</li>
-											<li data-filter=".budget-meal">Budget Meal</li>
-											<li data-filter=".buffet">Drinks</li>
-										</ul> -->
-
-										<div class="filters-content">
-											<div class="row grid">
-												<div class="col-md-4 featured-responsive all breakfast">
-													<div class="featured-place-wrap">
-														<a href="detail.html">
-															<img src="img/g5.jpg" class="img-fluid" alt="#">
-															<span class="featured-rating-orange">6.5</span>
-															<div class="featured-title-box">
-																<h6>Gazar &amp; Cake <span class="fa fa-map-marker"></span><p>Kathmandu</p></h6>
-																<p>Homemade </p> <span>• </span>
-																<p>3 Reviews</p> <span> • </span>
-																<p><span class="price">Rs. 200</span></p>
-																<ul>
-																	<li>
-																		This food item is very much good and we can also see this and that
-																	</li>
-																</ul>
-																<div class="bottom-icons">
-																	<div class="closed-now">Not Available</div>
-																	<span class="lnr lnr-heart"></span>
-																	<span class="lnr lnr-bookmark"></span>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-												<div class="col-md-4 featured-responsive all lunch">
-													<div class="featured-place-wrap">
-														<a href="detail.html">
-															<img src="img/g5.jpg" class="img-fluid" alt="#">
-															<span class="featured-rating-green">9.2</span>
-															<div class="featured-title-box">
-																<h6>Gazar &amp; Cake <span class="fa fa-map-marker"></span><p>Kathmandu</p></h6>
-																<p>Homemade </p> <span>• </span>
-																<p>3 Reviews</p> <span> • </span>
-																<p><span class="price">Rs. 200</span></p>
-																<ul>
-																	<li>
-																		This food item is very much good and we can also see this and that
-																	</li>
-																</ul>
-																<div class="bottom-icons">
-																	<div class="closed-now">Not Available</div>
-																	<span class="fa fa-heart"></span>
-																	<span class="fa fa-bookmark"></span>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-												<div class="col-md-4 featured-responsive all buffet">
-													<div class="featured-place-wrap">
-														<a href="detail.html">
-															<img src="img/g5.jpg" class="img-fluid" alt="#">
-															<span class="featured-rating">3.2</span>
-															<div class="featured-title-box">
-																<h6>Gazar &amp; Cake <span class="fa fa-map-marker"></span><p>Kathmandu</p></h6>
-																<p>Homemade </p> <span>• </span>
-																<p>3 Reviews</p> <span> • </span>
-																<p><span class="price">Rs. 200</span></p>
-																<ul>
-																	<li>
-																		This food item is very much good and we can also see this and that
-																	</li>
-																</ul>
-																<div class="bottom-icons">
-																	<div class="open-now">Available</div>
-																	<span class="fa fa-heart"></span>
-																	<span class="fa fa-bookmark"></span>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-
-												<div class="col-md-4 featured-responsive all breakfast">
-													<div class="featured-place-wrap">
-														<a href="detail.html">
-															<img src="img/g5.jpg" class="img-fluid" alt="#">
-															<span class="featured-rating-orange">6.5</span>
-															<div class="featured-title-box">
-																<h6>Gazar &amp; Cake <span class="fa fa-map-marker"></span><p>Kathmandu</p></h6>
-																<p>Homemade </p> <span>• </span>
-																<p>3 Reviews</p> <span> • </span>
-																<p><span class="price">Rs. 200</span></p>
-																<ul>
-																	<li>
-																		This food item is very much good and we can also see this and that
-																	</li>
-																</ul>
-																<div class="bottom-icons">
-																	<div class="closed-now">Not Available</div>
-																	<span class="lnr lnr-heart"></span>
-																	<span class="lnr lnr-bookmark"></span>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-												<div class="col-md-4 featured-responsive all lunch">
-													<div class="featured-place-wrap">
-														<a href="detail.html">
-															<img src="img/g5.jpg" class="img-fluid" alt="#">
-															<span class="featured-rating-green">9.2</span>
-															<div class="featured-title-box">
-																<h6>Gazar &amp; Cake <span class="fa fa-map-marker"></span><p>Kathmandu</p></h6>
-																<p>Homemade </p> <span>• </span>
-																<p>3 Reviews</p> <span> • </span>
-																<p><span class="price">Rs. 200</span></p>
-																<ul>
-																	<li>
-																		This food item is very much good and we can also see this and that
-																	</li>
-																</ul>
-																<div class="bottom-icons">
-																	<div class="closed-now">Not Available</div>
-																	<span class="fa fa-heart"></span>
-																	<span class="fa fa-bookmark"></span>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-												<div class="col-md-4 featured-responsive all buffet">
-													<div class="featured-place-wrap">
-														<a href="detail.html">
-															<img src="img/g5.jpg" class="img-fluid" alt="#">
-															<span class="featured-rating">3.2</span>
-															<div class="featured-title-box">
-																<h6>Gazar &amp; Cake <span class="fa fa-map-marker"></span><p>Kathmandu</p></h6>
-																<p>Homemade </p> <span>• </span>
-																<p>3 Reviews</p> <span> • </span>
-																<p><span class="price">Rs. 200</span></p>
-																<ul>
-																	<li>
-																		This food item is very much good and we can also see this and that
-																	</li>
-																</ul>
-																<div class="bottom-icons">
-																	<div class="open-now">Available</div>
-																	<span class="fa fa-heart"></span>
-																	<span class="fa fa-bookmark"></span>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-											</div>                          
-
-										</div>
-									</div>
-
-								</div>
-							</section>
-							<!-- End menu-area Area -->			
-
-
 			<!-- start footer Area -->		
 			<footer class="footer-area">
 				<div class="footer-widget-wrap">
@@ -670,10 +749,7 @@
 				</div>
 			</footer>
 		<!-- End footer Area -->	
-
-				<script src="js/vendor/jquery-2.2.4.min.js"></script>
-				<script src="js/popper.min.js"></script>
-				<script src="js/vendor/bootstrap.min.js"></script>			
+		
 				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
 				<script src="js/jquery-ui.js"></script>					
 				<script src="js/easing.min.js"></script>			
@@ -686,7 +762,6 @@
 				<script src="js/isotope.pkgd.min.js"></script>								
 				<script src="js/mail-script.js"></script>	
 				<script src="js/main.js"></script>	
-				<script src="js/login-modal.js"></script>
-				<script src="js/simpleCart.min.js"> </script>
+				<script src="js/login-modal.js"></script>				
 			</body>
 	</html>
