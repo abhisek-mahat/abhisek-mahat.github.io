@@ -224,7 +224,7 @@
 										<h1 class="text-white">
 											All Food Items		
 										</h1>	
-										<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="#">all Items </a></p>
+										<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="#">All Items </a></p>
 									</div>	
 								</div>
 							</div>
@@ -239,22 +239,22 @@
 											<header class="bg-white p-3 text-right" style="border-bottom: 1px solid #f5f5f5;">
 												<h6 class="title"><a href="javascript:" class="text-danger"><u>Reset filter</u></a></h6>
 											</header>
-											<div class="filter-content">
+											<div class="filter-content simpleCart_shelfItem">
 												<div class="card-body">
 													<form>
 														<div class="custom-control custom-checkbox">	
 														  	<input type="checkbox" class="custom-control-input" id="Check1">
-														  	<label class="custom-control-label" for="Check1">Non-veg</label>
+														  	<label class="custom-control-label item_custom-attribute" for="Check1">Non-veg</label>
 														</div> <!-- form-check.// -->
 
 														<div class="custom-control custom-checkbox">
 														  	<input type="checkbox" class="custom-control-input" id="Check2">
-														 	<label class="custom-control-label" for="Check2">Veg</label>
+														 	<label class="custom-control-label item_custom-attribute" for="Check2">Veg</label>
 														</div> <!-- form-check.// -->
 
 														<div class="custom-control custom-checkbox">
 														  	<input type="checkbox" class="custom-control-input" id="Check3">
-														  	<label class="custom-control-label" for="Check3">SuperChef</label>
+														  	<label class="custom-control-label item_custom-attribute" for="Check3">SuperChef</label>
 														</div> <!-- form-check.// -->
 													</form>
 												</div> <!-- card-body.// -->
@@ -323,7 +323,7 @@
 							$('#accordion').on('shown.bs.collapse', toggleIcon);
 						</script>
 
-						<div class="col-lg-8 posts-list">
+						<div class="col-lg-7 posts-list">
 							<div class="single-post row">								
 								<div class="col-lg-12">
 									<div class="single-sidebar-widget search-widget mb-5">
@@ -339,16 +339,16 @@
 								</div>
 
 								<div class="col-lg-12">
-									<div class="filters-content simpleCart_shelfItem">
+									<div class="filters-content">
 											<div class="row grid">
 												<div class="col-lg-6 featured-responsive all breakfast">
-													<div class="featured-place-wrap">
+													<div class="featured-place-wrap simpleCart_shelfItem">
 														<a href="detail.html">
-															<img src="img/aunt-1.jpg" class="img-fluid" alt="#">
+															<img src="img/aunt-1.jpg" class="img-fluid" alt="Item Alt">
 														</a>
 															<span class="featured-rating-orange" data-toggle="tooltip" data-placement="top" title="Hygiene and price Score">6.5</span>
 															<div class="featured-title-box">
-																<h4>Plain Veg Rice</h4>
+																<h4 class="item_name">Plain Veg Rice</h4>
 																<div class="my-2">										
 																	<p><i class="fa fa-cutlery"></i> Geeta Khadka</p> <span>• </span>
 																	<p><i class="fa fa-map-marker"></i> Koteshwor</p>		
@@ -359,7 +359,7 @@
 																</div>
 																<div>
 																	<h4 class="float-left"><span class="border">Veg</span></h4>
-																	<p class="float-right item_add"><span class="price item_price">Rs. 180</span></p>
+																	<p class="float-right"><span class="price item_price">Rs. 180</span></p>
 																</div>
 																<div class="clearfix"></div>
 																<div class="bottom-icons my-2">
@@ -367,7 +367,7 @@
 																	<a class="javascript:" href=""><span class="lnr lnr-heart">12</span></a>
 																	<a class="javascript:" href=""><span class="lnr lnr-bookmark">5</span></a>
 																</div>
-																<div class="item_add text-center"><a class="item_price genric-btn primary small" href="javascript:" style="margin: 25px 80px 0px;">Add to cart</a></div>
+																<div class="item_add text-center"><a class="genric-btn primary small item_add" href="javascript:;" style="margin: 25px 80px 0px;">Add to cart</a></div>
 																<div class="clearfix"></div>
 															</div>
 														
@@ -559,6 +559,15 @@
 
 					</div>
 
+					</div>
+					<div class="col-md-2">
+						<div class="location_now py-2 px-3 text-center border">
+									<i class="fa fa-map-markers"></i> Your current location is
+									<p>Himalaya Hotel, Pulchowk</p>
+									<div class="text-center"> 
+										<a href="javascript:" class="text-danger">Change</a> | <a href="javascript:" class="text-danger">Remove</a>
+									</div>
+								</div>
 					</div>
 				</div>	
 			</section>
